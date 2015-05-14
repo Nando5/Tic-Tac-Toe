@@ -1,6 +1,6 @@
 body {
 	margin: 0%;
-	background-image: url("../images/Aztec background2_small.jpg");
+	background-image: url("../images/aztecBackground2_small.jpg");
 	/*background-repeat: no-repeat;*/
 	/*background-size: 100%;*/
 }
@@ -66,7 +66,7 @@ button:hover {
 
 .board div {
 	display: inline-block;
-	background-image: url("../images/Aztec Closed.jpg");
+	background-image: url("../images/aztecClosed.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;
 	width: 32.8%;

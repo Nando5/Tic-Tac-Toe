@@ -21,13 +21,13 @@ var playerMove = function() { //asks the player for (row,column) ie.co-ordinates
 if ( gameComplete === false ) {
 
 	if ((currentMove === "X") && ( scoreArray[row][column] === "_" ) && ( $(this).children("img").length === 0 )) {
-		$(this).append('<img src="../Tic Tac Toe/images/Aztec Cross.jpg">');
+		$(this).append('<img src="../Tic Tac Toe/images/aztecCross.jpg">');
 	    scoreArray[row][column] = currentMove;
 	    winnerCondition();
 	    currentMove = "O";
 	}
 	else if ((currentMove === "O") && ( scoreArray[row][column] === "_" ) && ( $(this).children("img").length === 0 )) {
-		$(this).append('<img src="../Tic Tac Toe/images/Aztec Circle.jpg">');
+		$(this).append('<img src="../Tic Tac Toe/images/aztecCircle.jpg">');
 	    scoreArray[row][column] = currentMove;
 	    winnerCondition();
 	    currentMove = "X";
@@ -60,7 +60,9 @@ if ( gameComplete === false ) {
 	}
 	
 	else if ( scoreArray[0].indexOf("_") === -1 && scoreArray[1].indexOf("_") === -1 && scoreArray[2].indexOf("_") === -1 )  {
-		$("h1").text( "Game has ended in a tie" ); //Checks to see if all squares have been filled and no one has won.
+		var gameComplete = true;
+		$("h1").text( "Game has ended in a tie" );
+		$("div.board").off("click", "div", playerMove);//Checks to see if all squares have been filled and no one has won.
 	}
 
 												//Game will end in a tie.
@@ -77,6 +79,7 @@ var resetGame = function() {
 				[ "_" , "_" , "_"],
 
 				[ "_" , "_" , "_"]];
+
 
 	var currentMove = "X";
 	var gameComplete = false;
