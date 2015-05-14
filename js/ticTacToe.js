@@ -21,13 +21,13 @@ var playerMove = function() { //asks the player for (row,column) ie.co-ordinates
 if ( gameComplete === false ) {
 
 	if ((currentMove === "X") && ( scoreArray[row][column] === "_" ) && ( $(this).children("img").length === 0 )) {
-		$(this).append('<img src="../Tic Tac Toe/images/aztecCross.jpg">');
+		$(this).append('<img src="images/aztecCross.jpg">');
 	    scoreArray[row][column] = currentMove;
 	    winnerCondition();
 	    currentMove = "O";
 	}
 	else if ((currentMove === "O") && ( scoreArray[row][column] === "_" ) && ( $(this).children("img").length === 0 )) {
-		$(this).append('<img src="../Tic Tac Toe/images/aztecCircle.jpg">');
+		$(this).append('<img src="images/aztecCircle.jpg">');
 	    scoreArray[row][column] = currentMove;
 	    winnerCondition();
 	    currentMove = "X";
@@ -95,6 +95,7 @@ $(document).ready(function () {
 	//Call the resetGame function when the button is clicked.
 	$("button").on("click", resetGame);     
 });
+
 
 
 
