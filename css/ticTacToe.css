@@ -1,0 +1,83 @@
+body {
+	margin: 0%;
+	background-image: url("../images/Aztec background2_small.jpg");
+	/*background-repeat: no-repeat;*/
+	/*background-size: 100%;*/
+}
+
+h1 {
+	text-align: center;
+	margin: 20px auto 0 auto;
+	font-family: Arial;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 60px;
+	color: white;
+}
+
+button {
+  position: absolute;
+  top: 585px;
+  left: 1015px;
+  background: #d170e0;
+  background-image: -webkit-linear-gradient(top, #d170e0, #480f79);
+  background-image: -moz-linear-gradient(top, #d170e0, #480f79);
+  background-image: -ms-linear-gradient(top, #d170e0, #480f79);
+  background-image: -o-linear-gradient(top, #d170e0, #480f79);
+  background-image: linear-gradient(to bottom, #d170e0, #480f79);
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+  font-family: Arial;
+  color: white;
+  font-size: 20px;
+  padding: 0 5px;
+  text-decoration: none;
+}
+
+button:hover {
+  background: #8f4bcf;
+  background-image: -webkit-linear-gradient(top, #8f4bcf, #4f206b);
+  background-image: -moz-linear-gradient(top, #8f4bcf, #4f206b);
+  background-image: -ms-linear-gradient(top, #8f4bcf, #4f206b);
+  background-image: -o-linear-gradient(top, #8f4bcf, #4f206b);
+  background-image: linear-gradient(to bottom, #8f4bcf, #4f206b);
+  text-decoration: none;
+}
+
+
+
+/*.header {
+	height: 100px;
+	background-color: rgba(71,15,121,0.7);
+}*/
+
+.title {
+	width: 1000px;
+	margin: 10px auto 0px auto;
+	text-align: center;
+}
+
+.board {
+	width: 500px;
+	height: 500px;
+	margin: 30px auto 0px auto;
+}
+
+.board div {
+	display: inline-block;
+	background-image: url("../images/Aztec Closed.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 32.8%;
+	height: 32.8%;
+	border-radius: 10px;
+}
+
+.board img {
+	width:100%;
+	height:100%;
+}
+
+
+
