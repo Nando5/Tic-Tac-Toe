@@ -13,12 +13,12 @@ scoreArray =[[ "_" , "_" , "_"],//This array sets the game to blank.
 var currentMove = "X";
 var gameComplete = false;
 
-var playerMove = function() { //asks the player for (row,column) ie.co-ordinates and move ie. "O" or "X"
-	var row = parseInt( $(this).data("row") ); // Access the clicked element - using this (make sure you wrap it in jQuery!)
-	var column = parseInt( $(this).data("column") ); // Store the data-row attribute - use the .data() function
-									              // Store the data-column attribute - use the .data() function
+var playerMove = function() { //asks the player to pick a square (row,column) ie.co-ordinates and sets that square to either "O" or "X"
+	var row = parseInt( $(this).data("row") ); // grabs the data row and stores it.
+	var column = parseInt( $(this).data("column") ); // grabs the data column and stores it.
+
 	
-if ( gameComplete === false ) {
+if ( gameComplete === false ) { //as long as the game has not been won ie.false, then continue.
 
 	if ((currentMove === "X") && ( scoreArray[row][column] === "_" ) && ( $(this).children("img").length === 0 )) {
 		$(this).append('<img src="images/aztecCross.jpg">');
@@ -34,7 +34,7 @@ if ( gameComplete === false ) {
 	
 	}						
 	else {
-		$("h1").text("That square is taken, choose another");
+		$("h1").text("That square is taken, choose another"); //if square is already taken.
 	}
 
 }
@@ -56,44 +56,44 @@ if ( gameComplete === false ) {
 		var gameComplete = true;
 		var winner = currentMove; 
 		$("h1").text( winner + " has won!" );
-		$("div.board").off("click", "div", playerMove);
+		$("div.board").off("click", "div", playerMove); //set the 'click' to off.
 	}
 	
 	else if ( scoreArray[0].indexOf("_") === -1 && scoreArray[1].indexOf("_") === -1 && scoreArray[2].indexOf("_") === -1 )  {
 		var gameComplete = true;
 		$("h1").text( "Game has ended in a tie" );
 		$("div.board").off("click", "div", playerMove);//Checks to see if all squares have been filled and no one has won.
-	}
+	}													//Game will end in a tie.
 
-												//Game will end in a tie.
+												
 };
 
 
-var resetGame = function() {
+var resetGame = function() { //resets the board when game is finished.
 
-	$("div.board").find("img").remove();
-	$("h1").text("let's play");
+	$("div.board").find("img").remove(); //appended images will be removed.
+	$("h1").text("let's play"); //text will be set back to set play
 
-	scoreArray =[[ "_" , "_" , "_"],
+	scoreArray =[[ "_" , "_" , "_"], //array is set to empty again
 								
 				[ "_" , "_" , "_"],
 
 				[ "_" , "_" , "_"]];
 
 
-	var currentMove = "X";
-	var gameComplete = false;
+	var currentMove = "X"; //game must begin with X
+	var gameComplete = false; //game is set to false again
 
-	$("div.board").on("click", "div", playerMove);
+	$("div.board").on("click", "div", playerMove); //click event re-instated
 };
 
 
-//Call the playerMove function when a box is clicked.
-$(document).ready(function () {
+
+$(document).ready(function () { //Call the playerMove function when a box is clicked.
+
 	$("div.board").on("click", "div", playerMove);
 
-	//Call the resetGame function when the button is clicked.
-	$("button").on("click", resetGame);     
+	$("button").on("click", resetGame); //Call the resetGame function when the button is clicked.   
 });
 
 
@@ -122,50 +122,6 @@ $(document).ready(function () {
 
 
 
-
-
-
-
-
-
-// //CONTROLLING THE BACKGROUND COLOR
-// //grabs the current time using Date
-
-
-
-// var d, h, m, s, color;
-
-// function displayTime() {
-// 	d = new Date(); //new data object
-// 	h = d.getHours();
-// 	m = d.getMinutes();
-// 	s = d.getSeconds();
-	
-// 	//add zero to the left of the numbers if they are single digits
-// 	if ( h <= 9 ) {
-// 		h = '0' + h;
-// 	}
-
-// 	if ( m <= 9 ) {
-// 		m = '0' + m;
-// 	}
-
-// 	if ( s <= 9 ) {
-// 		s = '0' + s;
-// 	}
-	
-// 	color = "#" + h + m + s;
-
-
-// 	//set background color
-// 	document.body.style.background = color;
-	
-// 	//retrigger the function every second
-// 	setTimeout(displayTime, 2000);
-// }
-
-// //call the function
-// displayTime();
 
 
 

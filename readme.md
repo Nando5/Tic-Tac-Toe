@@ -11,4 +11,6 @@ First step i took was to build the logic in Javascript. I based the logic on an 
 
 After this, i built the html and css structure of the game and used jQuery to listen for a click on any given square. For each click, a new picture would be appended to that square until someone won or the board filled up.
 
-Lastly i created all the artwork from scratch. The background, title and square pieces were done using ill illustrator and Photoshop. Once i was happy i updated the images in the code and pushed up to github.
+Lastly i created all the artwork from scratch. The background, title and square pieces were done using illustrator and Photoshop. Once i was happy i updated the images in the code and pushed up to github.
+
+As a bonus, animation to the squares was added using the TweenMax library. One function to turn the rock square, and another to make it bounce and glow once the new image had been applied.
