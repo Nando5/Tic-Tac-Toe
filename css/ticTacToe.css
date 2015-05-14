@@ -17,8 +17,10 @@ h1 {
 
 button {
   position: absolute;
-  top: 120%;
-  left: 70%;
+  width: 150px;
+
+  bottom: 0%;
+  left: 110%;
   background: #d170e0;
   background-image: -webkit-linear-gradient(top, #d170e0, #480f79);
   background-image: -moz-linear-gradient(top, #d170e0, #480f79);
@@ -31,7 +33,6 @@ button {
   font-family: Arial;
   color: white;
   font-size: 20px;
-  padding: 0 5px;
   text-decoration: none;
 }
 
@@ -59,6 +60,7 @@ button:hover {
 }
 
 .board {
+	position: relative;
 	width: 500px;
 	height: 500px;
 	margin: 30px auto 0px auto;
