@@ -17,8 +17,8 @@ h1 {
 
 button {
   position: absolute;
-  top: 585px;
-  left: 1015px;
+  top: 120%;
+  left: 70%;
   background: #d170e0;
   background-image: -webkit-linear-gradient(top, #d170e0, #480f79);
   background-image: -moz-linear-gradient(top, #d170e0, #480f79);
