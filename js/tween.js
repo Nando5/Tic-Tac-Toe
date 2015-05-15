@@ -6,9 +6,8 @@ var rockTurn = function() { //function that turns the block.
 	currentTween = TweenMax.to(('#' + this.id), 1, { //takes TweenMax and applies it to 'this' id,
 		rotationY:'+=540', //rotates the images a couple of times.	//the speed is set to 1 second
 		ease: Bounce.easeOut,
-
 		onComplete: function () { //when finished, take 'that' and go do the glowIn function below.
-		glowIn( that );
+			glowIn( that );
 		}
 	})
 }
@@ -27,5 +26,4 @@ var glowIn = function( that ) {
 }
 
 
-$('body').on('click', ".box", rockTurn) //click event to execute animation.
-
+$('div.board').on('click', ".box", rockTurn) //click event to execute animation.
