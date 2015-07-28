@@ -1,6 +1,3 @@
-console.log("Tic Tac Toe");
-
-
 
 scoreArray =[[ "_" , "_" , "_"],//This array sets the game to blank.
 								//Player Moves will be pushed into here.
@@ -18,26 +15,27 @@ var playerMove = function() { //asks the player to pick a square (row,column) ie
 	var column = parseInt( $(this).data("column") ); // grabs the data column and stores it.
 
 	
-if ( gameComplete === false ) { //as long as the game has not been won ie.false, then continue.
+	if ( gameComplete === false ) { //as long as the game has not been won ie.false, then continue.
 
-	if ((currentMove === "X") && ( scoreArray[row][column] === "_" ) && ( $(this).children("img").length === 0 )) {
-		$(this).append('<img src="images/aztecCross.jpg">');
-	    scoreArray[row][column] = currentMove;
-	    winnerCondition();
-	    currentMove = "O";
-	}
-	else if ((currentMove === "O") && ( scoreArray[row][column] === "_" ) && ( $(this).children("img").length === 0 )) {
-		$(this).append('<img src="images/aztecCircle.jpg">');
-	    scoreArray[row][column] = currentMove;
-	    winnerCondition();
-	    currentMove = "X";
-	
-	}						
-	else {
-		$("h1").text("That square is taken, choose another"); //if square is already taken.
-	}
+		if ((currentMove === "X") && ( scoreArray[row][column] === "_" ) && ( $(this).children("img").length === 0 )) {
+			$(this).append('<img src="images/aztecCross.jpg">');
+		    scoreArray[row][column] = currentMove;
+		    winnerCondition();
+		    currentMove = "O";
+		}
+		else if ((currentMove === "O") && ( scoreArray[row][column] === "_" ) && ( $(this).children("img").length === 0 )) {
+			$(this).append('<img src="images/aztecCircle.jpg">');
+		    scoreArray[row][column] = currentMove;
+		    winnerCondition();
+		    currentMove = "X";
+		
+		}
 
-}
+		// else {
+		// 	$("h1").text("That square is taken, choose another"); //if square is already taken. On second thoughts, not necessary
+		// }
+
+	}
 };
 	var winnerCondition = function() {
 
@@ -89,9 +87,9 @@ var resetGame = function() { //resets the board when game is finished.
 
 
 
-$(document).ready(function () { //Call the playerMove function when a box is clicked.
+$(document).ready(function () { 
 
-	$("div.board").on("click", "div", playerMove);
+	$("div.board").on("click", "div", playerMove); //Call the playerMove function when a box is clicked.
 
 	$("button").on("click", resetGame); //Call the resetGame function when the button is clicked.   
 });

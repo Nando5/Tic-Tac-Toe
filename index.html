@@ -4,40 +4,31 @@
 		<meta charset="UTF-8">
 		<title>Tic Tac Toe Game</title>
 		<link rel="stylesheet" type="text/css" href="css/ticTacToe.css">
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>	
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/tween.js"></script>	
+		<script src="js/ticTacToe.js"></script>
 	</head>
 
 	<body>
-
-	<div class="header">
-		<div class="title">
-			<img src="images/aztecTitle2_small.png">
-	</div>
-
-
-	<div class="board">
-
-			<div id="1" class="box" data-row="0" data-column="0"></div>
-			<div id="2" class="box" data-row="0" data-column="1"></div>
-			<div id="3" class="box" data-row="0" data-column="2"></div>
-			<div id="4" class="box" data-row="1" data-column="0"></div>
-			<div id="5" class="box" data-row="1" data-column="1"></div>
-			<div id="6" class="box" data-row="1" data-column="2"></div>
-			<div id="7" class="box" data-row="2" data-column="0"></div>
-			<div id="8" class="box" data-row="2" data-column="1"></div>
-			<div id="9" class="box" data-row="2" data-column="2"></div>
-			
-			<button><p>Play Again</p></button>
-
-	</div>
-
-	
-
-	<h1>let's play!</h1>
-
-	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-	<script src="js/ticTacToe.js"></script>
-	<script type="text/javascript" src="js/tween.js"></script>
-		
+		<div id="container">
+			<div class="header">
+				<div class="title">
+				<img src="images/aztecTitle2_small.png">
+			</div>
+			<div class="board">
+				<div id="1" class="box" data-row="0" data-column="0"></div>
+				<div id="2" class="box" data-row="0" data-column="1"></div>
+				<div id="3" class="box" data-row="0" data-column="2"></div>
+				<div id="4" class="box" data-row="1" data-column="0"></div>
+				<div id="5" class="box" data-row="1" data-column="1"></div>
+				<div id="6" class="box" data-row="1" data-column="2"></div>
+				<div id="7" class="box" data-row="2" data-column="0"></div>
+				<div id="8" class="box" data-row="2" data-column="1"></div>
+				<div id="9" class="box" data-row="2" data-column="2"></div>	
+				<button><p>Play Again</p></button>
+			</div>
+			<h1>let's play!</h1>
+		</div> <!-- closes container div -->	
 	</body>
 </html>

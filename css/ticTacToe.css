@@ -44,6 +44,11 @@ button:hover {
   text-decoration: none;
 }
 
+#container {
+	width: 1000px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
 
 .title {
 	width: 1000px;
