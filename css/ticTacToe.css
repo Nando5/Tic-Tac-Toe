@@ -1,5 +1,5 @@
 body {
-	margin: 0%;
+	margin: 0;
 	background-image: url("../images/aztecBackground.jpg");
 
 }
@@ -17,8 +17,8 @@ h1 {
 button {
   position: absolute;
   width: 150px;
-  bottom: 0%;
-  left: 110%;
+  bottom: 45px;
+  left: 525px;
   background: #d170e0;
   background-image: -webkit-linear-gradient(top, #d170e0, #480f79);
   background-image: -moz-linear-gradient(top, #d170e0, #480f79);
@@ -58,6 +58,7 @@ button:hover {
 
 .board {
 	position: relative;
+	padding-left: 25px; 
 	width: 500px;
 	height: 500px;
 	margin: 30px auto 0px auto;
@@ -68,8 +69,8 @@ button:hover {
 	background-image: url("../images/aztecClosed.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;
-	width: 32.8%;
-	height: 32.8%;
+	width: 150px;
+	height: 150px;
 	border-radius: 10px;
 }
 
